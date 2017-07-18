@@ -7,12 +7,11 @@ from django.core.exceptions import ValidationError
 class RegisterForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password']
+        fields = ['first_name', 'last_name', 'username', 'email', 'password']
         widgets = {
             "password": forms.PasswordInput
         }
     retype_password = forms.CharField(widget=forms.PasswordInput)
-    Email = forms.EmailField(widget=forms.EmailInput)
 
     def clean_retype_password(self):
         password = self.cleaned_data['password']
