@@ -19,4 +19,10 @@ class TimelineView(ListView):
     template_name = 'index.html'
     def get_queryset(self):
         # implement the logic
-        return Message.objects.all()
+        if self.request.user.is_authenticated:
+            return Message.objects.all()
+
+        #if self.request.user.is_authenticated:
+        #    pass
+        #else:
+         #   return Message.objects.all()

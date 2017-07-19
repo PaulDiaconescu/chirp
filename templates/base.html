@@ -1,9 +1,12 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<link>
+
     <meta charset="UTF-8">
     <title>Chirp</title>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,17 +19,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Chirp</a>
+                <a class="navbar-brand font" href="{% url 'index' %}">CHIRP</a>
             </div>
 
-            <div class="pull-right">
+            <div class="pull-right marnav">
                 {%  if user.is_authenticated %}
                     {{ user }}
                     <a href="{% url 'logout' %}">Logout</a>
@@ -37,12 +48,11 @@
             </div>
         </div>
     </nav>
-    <!--useless comment-->
+
     <div class="container">
         {% block content %}{% endblock %}
 
     </div>
-
 
 </body>
 
