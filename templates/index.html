@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% for message in object_list %}
+    <div class="row chirp">
+    <p>{{ message.username }}</p>
+    {{ message }}
+    </div>
+{% endfor %}
 {% endblock %}
