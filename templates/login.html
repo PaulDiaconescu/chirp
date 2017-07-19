@@ -12,7 +12,6 @@
 								<strong> Sign in to continue</strong>
 							</div>
 							<div class="panel-body">
-								<!--<form role="form" action="#" method="POST">-->
                                 <fieldset>
                                     <div class="form-group">
                                         <div class="center-block">
@@ -26,7 +25,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="glyphicon glyphicon-user"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Username" name="username" type="text" required="" autofocus maxlength="254">
+                                                    <input class="form-control" placeholder="Username" name="username" type="text" required id="id_username" autofocus maxlength="254">
                                                     {{ form.username.errors }}
                                                 </div>
                                             </div>
@@ -35,7 +34,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="glyphicon glyphicon-lock"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Password" name="password" type="password" required="" value="">
+                                                    <input class="form-control" placeholder="Password" name="password" type="password" required id="id_password" value="">
                                                     {{ form.username.errors }}
                                                 </div>
                                             </div>
@@ -56,7 +55,6 @@
 			</div>
 
             <!--{{ form.as_p }}-->
-            <!--<button type="submit">Login</button>-->
 
         </form>
 {% endblock %}
