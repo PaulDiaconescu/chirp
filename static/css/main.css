@@ -30,6 +30,12 @@ h2 {
     margin-top: 8px;
 }
 
+.errorcolor{
+    color: red;
+    font-weight: bold;
+    text-align: left;
+}
+
 body {
   background-image: url('http://i.imgur.com/Cj1RRYU.jpg') ;
   background-size: cover;
@@ -43,3 +49,4 @@ body {
     .navbar-header {
         float: left;
     }
+

@@ -20,9 +20,6 @@ class TimelineView(ListView):
     def get_queryset(self):
         # implement the logic
         if self.request.user.is_authenticated:
+            return Message.objects.filter(user=self.request.user)
+        else:
             return Message.objects.all()
-
-        #if self.request.user.is_authenticated:
-        #    pass
-        #else:
-         #   return Message.objects.all()

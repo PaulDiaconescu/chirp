@@ -17,7 +17,7 @@ class RegisterForm(forms.ModelForm):
         password = self.cleaned_data['password']
         retype_password = self.cleaned_data['retype_password']
         if password != retype_password:
-            raise ValidationError("The two password do not match")
+            raise ValidationError("The two passwords do not match!")
         return retype_password
 
     def save(self, commit=True):
