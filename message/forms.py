@@ -26,3 +26,5 @@ class RegisterForm(forms.ModelForm):
         if commit:
             new_user.save()
         return new_user
+
+#¯\_(ツ) _ /¯
