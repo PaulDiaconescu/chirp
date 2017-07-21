@@ -37,8 +37,20 @@
             </div>
             <div class="pull-right marnav">
                 {%  if user.is_authenticated %}
-                    {{ user }}
-                    <a href="{% url 'logout' %}">Logout</a>
+                    <li class="dropdown marnav" type="none">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span> 
+                            <strong>{{ user }}</strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eY52Zsg-KVI&t=14s">Help</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
+                    </li>
                 {%  else %}
                     <a href="{% url 'login' %}">Login</a>
                     <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
