@@ -44,7 +44,7 @@
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">My Profile</a></li>
+                            <li><a href="{% url 'my-profile' %}">My Profile</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="https://www.youtube.com/watch?v=eY52Zsg-KVI&t=14s">Help</a></li>
                             <li role="separator" class="divider"></li>
@@ -59,7 +59,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" role="main">
         {% block content %}{% endblock %}
 
     </div>

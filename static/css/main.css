@@ -36,6 +36,14 @@ h2 {
     text-align: left;
 }
 
+.profile-icon {
+    padding: 20px;
+    border: 1px solid #383838;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
 body {
   background-image: url('http://i.imgur.com/Cj1RRYU.jpg') ;
   background-size: cover;
@@ -49,4 +57,56 @@ body {
     .navbar-header {
         float: left;
     }
+    .ayylmao{
+        float: left;
+    }
+}
+
+.container[role=main] {
+    margin-top: 75px;
+}
+
+.martop{
+    margin-top: 5px;
+    margin-bottom: -10px;
+}
+
+.marchirp{
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+.right{
+    width: 90px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    padding: 10px;
+}
+
+.a2{
+    color:white;
+    font-weight: bold;
+
+}
+
+.a2:hover {
+    color:white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bawld{
+    font-weight: bold;
+}
+
+.marleft{
+    margin-right: 10px;
+}
+
+.panel-body  {
+    word-break:break-all
 }
