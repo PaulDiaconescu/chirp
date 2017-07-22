@@ -1,28 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p style="text-align:center"><img src="http://i.imgur.com/pPrvVbF.png" /></p>
-
-
-
+    <p style="text-align:center"><img src="http://i.imgur.com/nnkZmO3.png" /></p>
 
     {% for message in object_list %}
-<div class=" col-sm-12">
-    <div class="row chirp marchirp">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <p>
-                    {% if user == message.user %}
-                        <span class="label label-primary username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
-                    {% else %}
-                        <span class="label label-default username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
-                    {% endif %}
-                    <small>{{ message.created }}</small>
-                </p>
-                <p>{{ message }}</p>
+        <div class=" col-sm-12">
+            <div class="row chirp marchirp">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>
+                            {% if user == message.user %}
+                                <span class="label label-primary username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
+                            {% else %}
+                                <span class="label label-default username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
+                            {% endif %}
+                            <small>{{ message.created }}</small>
+                        </p>
+                        <p>{{ message }}</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
     {% endfor %}
 
 {% endblock %}
