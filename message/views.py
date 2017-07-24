@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, FormView
 from django.views.generic.list import ListView
 
 from message.forms import RegisterForm
@@ -40,3 +40,14 @@ class MyProfileView(ProfileBaseView):
 class ProfileView(ProfileBaseView):
     def get_slug_field(self):
         return "username"
+
+def follow_user(request, username):
+    print(username)
+
+    user = get_object_or_404(User, username=username)
+    follow = Follow(follow_user=user, follow_user=request.user)
+    follow.save()
+
+    messages.info(request, "You are now following{0}".format(username))
+
+    return redirect('profile', username)

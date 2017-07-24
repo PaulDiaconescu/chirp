@@ -20,5 +20,7 @@ class Like(TimestampModel):
     like = models.BooleanField()
 
 class Follow(TimestampModel):
+    class Meta:
+        unique_together = [("followed_user", "following_user"),]
     followed_user = models.ForeignKey(User, related_name='followed_by')
     following_user = models.ForeignKey(User, related_name='following')
