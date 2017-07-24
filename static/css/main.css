@@ -73,14 +73,6 @@ body {
     margin-bottom: -15px;
 }
 
-.right{
-    width: 90px;
-    height: 40px;
-    margin-bottom: 20px;
-    margin-left: 13px;
-    padding: 10px;
-}
-
 .a2{
     color:white;
     font-weight: bold;
@@ -112,3 +104,4 @@ a:hover {
     color:white;
     font-weight: bold;
 }
+

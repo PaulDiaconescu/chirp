@@ -26,6 +26,3 @@ class RegisterForm(forms.ModelForm):
         if commit:
             new_user.save()
         return new_user
-
-class FollowUserForm(forms.Form):
-    follow_username = forms.CharField()
