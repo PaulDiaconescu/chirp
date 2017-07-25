@@ -4,6 +4,9 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
+from message.models import Message
+
+
 class RegisterForm(forms.ModelForm):
     class Meta:
         model = User
@@ -26,3 +29,9 @@ class RegisterForm(forms.ModelForm):
         if commit:
             new_user.save()
         return new_user
+
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ["user", "status"]
