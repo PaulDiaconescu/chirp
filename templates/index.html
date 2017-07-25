@@ -7,8 +7,8 @@
         <form method="post" action="{% url 'chirp' %} object.username">
             {% csrf_token %}
             <input type="hidden" name="user" value="{{ request.user.id }}">
-            <label for="id_status">Status:</label>
-            <input type="text" name="status" maxlength="140" id="id_status" claa="{% if from.status.errors %} error-field{% endif %}"/>
+            <!--<label for="id_status">Status:</label>-->
+            <input type="text" placeholder="Add a chirp" name="status" maxlength="140" id="id_status" class="{% if from.status.errors %} error-field{% endif %}"/>
         {{ form.status.errors }}
             <button type="submit" class="btn btn-primary">Chirp</button>
         </form>

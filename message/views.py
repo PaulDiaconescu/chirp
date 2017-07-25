@@ -46,11 +46,9 @@ class MyProfileView(ProfileBaseView):
     def get_object(self, queryset=None):
         return self.request.user
 
-
 class ProfileView(ProfileBaseView):
     def get_slug_field(self):
         return "username"
-
 
 def follow_user(request, username):
     user = get_object_or_404(User, username=username)
@@ -71,7 +69,6 @@ def unfollow_user(request, username):
     except IntegrityError:
         messages.error(request, "You are already following this user")
     return redirect('profile', username)
-
 
 def new_chirp(request):
     if request.method == "POST":
