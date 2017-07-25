@@ -65,7 +65,7 @@ def unfollow_user(request, username):
     try:
         follow = Follow.objects.filter(followed_user=user, following_user=request.user).first()
         follow.delete()
-        messages.info(request, "You are now no longer following {0}".format(username))
+        messages.info(request, "You are no longer following {0}".format(username))
     except IntegrityError:
         messages.error(request, "You are already following this user")
     return redirect('profile', username)
