@@ -6,7 +6,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <span class="glyphicon glyphicon-user profile-icon" aria-hidden="true"></span><br>
-                <span class="bawld"><a href = {% url 'my-profile' %}>@{{ object.username }}</span></a><br>
+                <span class="bawld"><a href = {% url 'my-profile' %}>@{{ object.username }}</a></span><br>
                 <span class="bawld">{{ object.first_name }} {{ object.last_name }}</span><br>
                 <span class="marleft">{{ object.email }}</span><br>
                 {% if request.user != object %}
@@ -42,7 +42,6 @@
             <li role="presentation" class="active"><a href="#">Chirps</a></li>
             <li role="presentation"><a href="#">Following</a></li>
             <li role="presentation"><a href="#">Followers</a></li>
-            <li role="presentation"><a href="#">Chirp</a></li>
         </ul>
 
         {% for message in chirps %}
