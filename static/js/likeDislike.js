@@ -1,5 +1,5 @@
 /**
- * Created by P5RO-PORT079 on 7/26/2017.
+ * Created by Paul Diaconescu on 7/26/2017.
  */
 
 (function(){
@@ -28,6 +28,7 @@
             });
 
         });
+
         $('.dislike-message').click(function(){
             /*alert("Pressed a dislike button!");*/
             var request = $.ajax({

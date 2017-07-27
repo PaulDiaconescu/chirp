@@ -2,7 +2,6 @@
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import JsonResponse
-from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.utils import IntegrityError
 from django.views.decorators.csrf import csrf_exempt
@@ -25,7 +24,7 @@ class TimelineView(ListView):
     template_name = 'index.html'
     def get_queryset(self):
         #return Message.objects.all().order_by("-created")
-        # implement the logic
+        #implement the logic
         if self.request.user.is_authenticated:
             #return Message.objects.filter(user=self.request.user).order_by("-created")
         #else:

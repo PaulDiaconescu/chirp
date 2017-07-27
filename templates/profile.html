@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div class="row">
 
     <div class="col-xs-12 col-sm-12 col-md-3">
@@ -31,7 +32,7 @@
                     {% for message in messages %}
                     <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                     {% endfor %}
-                </ul>
+                </p>
             </div>
         {% endif %}
 
@@ -44,6 +45,7 @@
             <li role="presentation"><a href="#followers-tab" data-toggle="tab">Followers</a></li>
         </ul>
             <div class="tab-content">
+
                 <div class="tab-pane active" id="chirps-tab">
                  {% for message in chirps %}
                         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -65,15 +67,18 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="tab-pane active" id="following-tab">
 
+                <div class="tab-pane active" id="following-tab">
+                    <!-- ¯\_(ツ)_/¯ -->
                 </div>
 
                 <div class="tab-pane active" id="followers-tab">
-
+                    <!-- ¯\_(ツ)_/¯ -->
                 </div>
 
             </div>
     </div>
+
 {% endblock %}
+
 </div>

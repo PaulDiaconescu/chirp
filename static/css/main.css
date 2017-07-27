@@ -97,7 +97,6 @@ a:hover {
 
 .panel-body  {
     word-break:break-all;
-    box-sizing: border-box;
 }
 
 .ac{
@@ -118,10 +117,31 @@ a:hover {
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+input[type="text-chirp"] {
     height: 50px;
 }
 
 .margine-logo{
     margin-bottom: 25px;
+}
+
+.welcome-text{
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+}
+
+.login-text{
+    color:white;
+}
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+.bg-lightgray
+{
+    background-color:transparent;
+}
+
+.copyrights{
+    color:white;
 }

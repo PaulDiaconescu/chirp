@@ -7,26 +7,39 @@
     </p>
 </div>
 
-<div class="col-sm-12">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <p style="text-align: left" class="bawld">Compose new Chirp</p>
-                {% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="text-align: left" class="bawld">Compose new Chirp</p>
                     <form method="post" action="{% url 'chirp' %} object.username">
                         {% csrf_token %}
                         <input type="hidden" name="user" value="{{ request.user.id }}"/>
                         <p style="text-align: left">
-                            <input type="text" class="form-control" class="panel panel-default panel-body" placeholder="What's happening?" name="status" maxlength="140" id="id_status" class="{% if from.status.errors %} error-field{% endif %}"/>
+                            <input type="text-chirp" class="form-control" class="panel panel-default panel-body" placeholder="What's happening?" name="status" maxlength="140" id="id_status" class="{% if from.status.errors %} error-field{% endif %}"/>
                         </p>
                         {{ form.status.errors }}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
                         <p style="text-align: center">
-                            <button type="submit" class="btn btn-primary buton">Chirp</button>
+                        <button type="submit" class="btn btn-primary buton">Chirp</button>
                         </p>
                     </form>
-                {% endif %}
+        {% else %}
+        <div class="margine-logo">
+            <p style="text-align:center" class="welcome-text">Welcome to Chirp!</p><br>
+            <p style="text-align:center" class="login-text">Please log in to continue.</p><br>
+        </div>
+        <footer class="container-fluid text-center bg-lightgray">
+            <div class="copyrights" style="margin-top:200px;">
+                <p>©2017 All Rights Reserved
+                    <br>
+                    <span>Designed by: Paul Diaconescu</span></p>
+                <p><a href="https://github.com/PaulDiaconescu" target="_blank">GitHub <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a></p>
+            </div>
+        </footer>
+    {% endif %}
 
     {% for message in object_list %}
         <div class="col-sm-12">
