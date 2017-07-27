@@ -96,7 +96,8 @@ a:hover {
 }
 
 .panel-body  {
-    word-break:break-all
+    word-break:break-all;
+    box-sizing: border-box;
 }
 
 .ac{
