@@ -14,5 +14,3 @@ Nice to have:
 2. Post a photo
 
 Mockups: https://app.moqups.com/cristianca/X5PafO2Mro/view
-
-[~comments]: https://img.shields.io/badge/-comments-006b75.svg
